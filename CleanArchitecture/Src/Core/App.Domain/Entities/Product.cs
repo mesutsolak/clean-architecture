@@ -1,6 +1,4 @@
-﻿using App.Application.Entities.Common;
-
-namespace App.Application.Entities.Products;
+﻿namespace App.Domain.Entities;
 
 public class Product : BaseEntity<int>, IAuditEntity
 {

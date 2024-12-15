@@ -1,0 +1,13 @@
+﻿global using App.Application.Contracts.Persistence;
+global using App.Application.Features.Categories.Create;
+global using App.Application.Features.Categories.Dto;
+global using App.Application.Features.Products.Create;
+global using App.Application.Features.Products.Dto;
+global using App.Application.Features.Products.Update;
+global using App.Application.Features.Products.UpdateStock;
+global using App.Domain.Entities;
+global using AutoMapper;
+global using FluentValidation;
+global using System.Linq.Expressions;
+global using System.Net;
+global using System.Text.Json.Serialization;

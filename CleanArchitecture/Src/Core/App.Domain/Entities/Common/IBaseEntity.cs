@@ -1,4 +1,4 @@
-﻿namespace App.Application.Entities.Common;
+﻿namespace App.Domain.Entities.Common;
 
 public interface IAuditEntity
 {
