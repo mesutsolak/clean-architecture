@@ -1,7 +1,9 @@
 ﻿namespace App.Application.Features.Products;
 
-public class ProductService(IProductRepository productRepository, IUnitOfWork unitOfWork, IMapper mapper) : IProductService
+public class ProductService(IProductRepository productRepository, IUnitOfWork unitOfWork, IMapper mapper, ICacheService cacheService) : IProductService
 {
+    private const string ProductListCacheKey = "ProductListCacheKey";
+
     public async Task<ServiceResult<CreateProductResponse>> CreateAsync(CreateProductRequest request)
     {
         var isAnyProduct = await productRepository.AnyAsync(x => x.Name.Equals(request.Name));
@@ -19,9 +21,15 @@ public class ProductService(IProductRepository productRepository, IUnitOfWork un
 
     public async Task<ServiceResult<List<ProductDto>>> GetAllListAsync()
     {
+        var productListAsCached = await cacheService.GetAsync<List<ProductDto>>(ProductListCacheKey);
+
+        if (productListAsCached is not null) return ServiceResult<List<ProductDto>>.Success(productListAsCached);
+
         var products = await productRepository.GetAllAsync();
 
         var productAsDto = mapper.Map<List<ProductDto>>(products);
+
+        await cacheService.AddAsync(ProductListCacheKey, productAsDto, TimeSpan.FromMinutes(1));
 
         return ServiceResult<List<ProductDto>>.Success(productAsDto);
     }

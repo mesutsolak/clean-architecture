@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174 d17.12
+VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{D3E3A4E7-FC5F-4136-A26A-30DC3CA6A233}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Persistence", "Src\Infrastructure\App.Persistence\App.Persistence.csproj", "{05F65293-4A04-432A-8800-82531F299ACF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{E1E9F2C7-8034-42F2-94F4-BF6F085F7196}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Caching", "Src\Infrastructure\App.Caching\App.Caching.csproj", "{D1B4F869-F9BA-4567-9371-5AD039CDF8C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{05F65293-4A04-432A-8800-82531F299ACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05F65293-4A04-432A-8800-82531F299ACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05F65293-4A04-432A-8800-82531F299ACF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1B4F869-F9BA-4567-9371-5AD039CDF8C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B4F869-F9BA-4567-9371-5AD039CDF8C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B4F869-F9BA-4567-9371-5AD039CDF8C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B4F869-F9BA-4567-9371-5AD039CDF8C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,5 +61,6 @@ Global
 		{90993DB6-B0EF-443D-A47F-48AE8004B9AC} = {CB9EE83D-F10D-4925-A232-352C9EAA4F80}
 		{C309F230-42A2-4E1D-8832-C2930DA2ECD4} = {D3E3A4E7-FC5F-4136-A26A-30DC3CA6A233}
 		{05F65293-4A04-432A-8800-82531F299ACF} = {C309F230-42A2-4E1D-8832-C2930DA2ECD4}
+		{D1B4F869-F9BA-4567-9371-5AD039CDF8C2} = {C309F230-42A2-4E1D-8832-C2930DA2ECD4}
 	EndGlobalSection
 EndGlobal

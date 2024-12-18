@@ -1,4 +1,5 @@
-﻿global using App.Application.Contracts.Persistence;
+﻿global using App.Application.Contracts.Caching;
+global using App.Application.Contracts.Persistence;
 global using App.Application.Features.Categories;
 global using App.Application.Features.Categories.Create;
 global using App.Application.Features.Categories.Dto;

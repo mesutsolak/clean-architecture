@@ -1,4 +1,5 @@
 ﻿global using App.Application;
+global using App.Application.Contracts.Caching;
 global using App.Application.Contracts.Persistence;
 global using App.Application.Extensions;
 global using App.Application.Features.Categories;
@@ -8,13 +9,16 @@ global using App.Application.Features.Products;
 global using App.Application.Features.Products.Create;
 global using App.Application.Features.Products.Update;
 global using App.Application.Features.Products.UpdateStock;
+global using App.Caching;
 global using App.Domain.Entities;
 global using App.Domain.Exceptions;
 global using App.Persistence.Extensions;
 global using CleanApp.API.ExceptionHandler;
+global using CleanApp.API.Extensions;
 global using CleanApp.API.Filters;
 global using Microsoft.AspNetCore.Diagnostics;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.AspNetCore.Mvc.Filters;
+global using Microsoft.OpenApi.Models
 global using System.Net;
 global using System.Net.Mime;
