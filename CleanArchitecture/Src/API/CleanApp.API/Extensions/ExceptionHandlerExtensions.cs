@@ -8,5 +8,5 @@ public static class ExceptionHandlerExtensions
         services.AddExceptionHandler<GlobalExceptionHandler>();
 
         return services;
-    };
+    }
 }

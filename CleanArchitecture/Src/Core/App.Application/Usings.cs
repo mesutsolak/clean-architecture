@@ -1,5 +1,6 @@
 ﻿global using App.Application.Contracts.Caching;
 global using App.Application.Contracts.Persistence;
+global using App.Application.Contracts.ServiceBus;
 global using App.Application.Features.Categories;
 global using App.Application.Features.Categories.Create;
 global using App.Application.Features.Categories.Dto;
@@ -9,6 +10,7 @@ global using App.Application.Features.Products.Dto;
 global using App.Application.Features.Products.Update;
 global using App.Application.Features.Products.UpdateStock;
 global using App.Domain.Entities;
+global using App.Domain.Events;
 global using AutoMapper;
 global using FluentValidation;
 global using FluentValidation.AspNetCore;

@@ -1,6 +1,6 @@
 ﻿namespace App.Application.Features.Products;
 
-public class ProductService(IProductRepository productRepository, IUnitOfWork unitOfWork, IMapper mapper, ICacheService cacheService) : IProductService
+public class ProductService(IProductRepository productRepository, IUnitOfWork unitOfWork, IMapper mapper, ICacheService cacheService, IServiceBus busService) : IProductService
 {
     private const string ProductListCacheKey = "ProductListCacheKey";
 
@@ -15,6 +15,8 @@ public class ProductService(IProductRepository productRepository, IUnitOfWork un
 
         await productRepository.AddAsync(product);
         await unitOfWork.SaveChangesAsync();
+
+        await busService.PublishAsync(new ProductAddedEvent(product.Id, product.Name, product.Price));
 
         return ServiceResult<CreateProductResponse>.SuccessAsCreated(new CreateProductResponse(product.Id), $"api/products/{product.Id}");
     }

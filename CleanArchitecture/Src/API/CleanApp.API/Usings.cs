@@ -9,6 +9,7 @@ global using App.Application.Features.Products;
 global using App.Application.Features.Products.Create;
 global using App.Application.Features.Products.Update;
 global using App.Application.Features.Products.UpdateStock;
+global using App.Bus;
 global using App.Caching;
 global using App.Domain.Entities;
 global using App.Domain.Exceptions;
@@ -19,6 +20,6 @@ global using CleanApp.API.Filters;
 global using Microsoft.AspNetCore.Diagnostics;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.AspNetCore.Mvc.Filters;
-global using Microsoft.OpenApi.Models
+global using Microsoft.OpenApi.Models;
 global using System.Net;
 global using System.Net.Mime;
