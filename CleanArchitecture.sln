@@ -19,8 +19,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Persistence", "Src\Infrastructure\App.Persistence\App.Persistence.csproj", "{05F65293-4A04-432A-8800-82531F299ACF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{E1E9F2C7-8034-42F2-94F4-BF6F085F7196}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Caching", "Src\Infrastructure\App.Caching\App.Caching.csproj", "{D1B4F869-F9BA-4567-9371-5AD039CDF8C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Bus", "Src\Infrastructure\App.Bus\App.Bus.csproj", "{5F7F314F-45B4-44FF-BD59-91D58FC049FD}"
